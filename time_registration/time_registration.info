@@ -1,0 +1,9 @@
+name = Time Registration
+description = Working hours registration.
+core = 7.x 
+scripts[] = timereg.js
+scripts[] = jquery.validate.min.js
+scripts[] = filterInit.js
+dependencies[]=sugarcrm_connector
+package=Time Registration
+stylesheets[all][] = time_registration.css

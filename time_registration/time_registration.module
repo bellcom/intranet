@@ -1,0 +1,282 @@
+<?php
+module_load_include('php', "sugarcrm_connector", "SugarCrmConnector.php");
+function time_registration_block_info() {
+    $blocks['time_registration'] = array(
+        
+        'info' => t('Time registration'), //The name that will appear in the block list.
+        'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+    );
+    return $blocks;
+}
+
+function time_registration_block_view($delta = '') {    
+        $content[] = array('data'=>l('Time registration form', 'timereg'));
+        $content[]= array('data'=>l('Case dump', 'case-dump'));
+    if ($delta == 'time_registration') {
+        $block = array(
+            'title' => t('Time registration'),
+           
+        );
+        $block['content']=theme('item_list', array(
+            'items' => $content));
+    }
+    return $block;
+}
+function time_registration_permission(){    
+
+return array('timeregistration page'
+
+=> array(
+
+'title' => t('View timeregistration page'),
+
+
+
+),
+
+);
+
+}
+function time_registration_menu() {
+    $items['timereg'] = array(
+        'title' => t('Time registration'), 
+        'page callback' => 'time_registration_page', 
+        'type' => MENU_NORMAL_ITEM,
+         
+        'access arguments' => array('timeregistration page'),
+    );
+    $items['case-dump'] = array(
+        'title' => t('Case dump'), 
+        'page callback' => 'case_dump_page_view', 
+        'type' => MENU_NORMAL_ITEM,
+        'file'=>'time_registration_case_dump.inc',
+       
+        'access arguments' => array('timeregistration page'),
+    );
+    $items['timereg/jsinit'] = array(
+        'type' => MENU_CALLBACK,
+        'page callback' => 'ajax_jsinit',
+        'access arguments' => array('access content'),
+    );
+    $items['timereg/save'] = array(
+        'type' => MENU_CALLBACK,
+        'page callback' => 'ajax_save_record',
+        'access arguments' => array('access content'),
+    );
+    return $items;
+}
+
+function case_dump_page_view() {
+   
+       global $user;
+    module_load_include('inc', "sugarcrm_connector", "sugarcrm_login_form"); 
+   module_load_include('inc', "sugarcrm_connector", "sugarcrm_integration"); 
+    if (!isset($_COOKIE['sessionID'])) {
+        $account = user_load($user->uid); 
+        if (!(isset($account->field_sugarcrm_username['und'][0]['value'])&& isset($account->field_sugarcrm_password['und'][0]['value'])))
+            return drupal_get_form('login_form');
+        else{
+            if(connectSugarCRM($account->field_sugarcrm_username['und'][0]['value'],$account->field_sugarcrm_password['und'][0]['value']))
+            return drupal_get_form('case_filter_form');
+          else
+              return drupal_get_form('login_form'); 
+        }
+    } else {
+           return drupal_get_form('case_filter_form');
+    }
+  
+}
+function time_registration_page() {
+      
+    global $user;
+    module_load_include('inc', "sugarcrm_connector", "sugarcrm_login_form"); 
+   module_load_include('inc', "sugarcrm_connector", "sugarcrm_integration"); 
+    if (!isset($_COOKIE['sessionID'])) {
+        $account = user_load($user->uid); 
+        if (!(isset($account->field_sugarcrm_username['und'][0]['value'])&& isset($account->field_sugarcrm_password['und'][0]['value'])))
+            return drupal_get_form('login_form');
+        else{
+            if(connectSugarCRM($account->field_sugarcrm_username['und'][0]['value'],$account->field_sugarcrm_password['und'][0]['value']))
+            return drupal_get_form('time_registration_form');
+          else
+              return drupal_get_form('login_form'); 
+        }
+    } else {
+           return drupal_get_form('time_registration_form');
+    }
+    }  
+
+function time_registration_form($form, &$form_state) {
+    drupal_add_js('jQuery(document).ready(function () {    timeRegForm.init() });', array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
+   
+    
+    $months = array(
+        '01' => 'januar',
+        '02' => 'februar',
+        '03' => 'marts',
+        '04' => 'april',
+        '05' => 'maj',
+        '06' => 'juni',
+        '07' => 'juli',
+        '08' => 'august',
+        '09' => 'september',
+        '10' => 'oktober',
+        '11' => 'november',
+        '12' => 'december',
+    );
+    $form = array(
+        'filter' => array(
+            '#type' => 'textfield',
+            '#title' => t('Filter'), //The label that will be placed with the field
+            '#required' => FALSE,
+            '#id' => t('filter')
+        ),
+        'case_id' => array(
+            '#type' => 'select',
+            '#size' => 20,
+            '#title' => t('Case:'),
+            '#id' => 'cases',
+            '#options' => array(),
+            '#required' => TRUE,
+            '#style'=>'float:left'
+        ),
+        'refresh_cases' => array(
+            '#id' => 'refresh_cases',
+            '#name' => 'refresh_cases',
+            '#type' => 'button',
+            '#value' => t('Genindlæs'),
+        ),
+        'hours' => array(
+            '#id' => 'hours',
+            '#type' => 'textfield',
+            '#title' => t('Tid'), //The label that will be placed with the field
+            '#required' => TRUE,
+        ),
+        'category' => array(
+            '#type' => 'select',
+            '#title' => t('Kategori:'),
+            '#options' => array(
+                10 => 'Møde',
+                15 => 'Aften support',
+                17 => 'Udvikling'),
+            '#default_value' => 17,
+            '#required' => TRUE,
+        ),
+        'description' => array(
+            '#type' => 'textfield',
+            '#id' => 'description',
+            '#title' => t('Beskrivelse:'), //The label that will be placed with the field
+            '#required' => TRUE,
+        ),
+        'comment' => array(
+            '#type' => 'textfield',
+            '#id' => 'comment',
+            '#title' => t('Kommentar:'), //The label that will be placed with the field
+            '#required' => FALSE,
+        ),
+        'day' => array(
+            '#type' => 'textfield',
+            '#title' => t('Dag:'),
+            '#required' => TRUE,
+            '#default_value' => date('d'),
+        ),
+        'month' => array(
+            '#type' => 'select',
+            '#title' => t('M&aring;ned:'),
+            '#id' => 'month',
+            '#options' => $months,
+            '#default_value' => date('m'),
+            '#required' => TRUE,
+        ),
+        'year' => array(
+            '#type' => 'textfield',
+            '#title' => t('&Aring;r:'),
+            '#required' => TRUE,
+            '#default_value' => date('Y'),
+        ),
+        'submit' => array(
+            '#id' => 'save',
+            '#name' => 'save',
+            '#type' => 'submit',
+            '#value' => t('Gem'),
+        ),
+    );
+    $form['markup'] = array(
+        '#prefix' => '<div id = "log">',
+        '#suffix' => '</div>',
+        '#markup' => '',
+    );
+    $form['#attributes'] = array('OnSubmit' => 'return false');
+    return $form;
+}
+
+function ajax_jsinit() {
+  module_load_include('inc', "sugarcrm_connector", "sugarcrm_integration");            
+    try {
+         
+        $casesData = getCases();
+        $cases = array();
+        $casesToAccounts = array();
+
+        foreach ($casesData->entry_list as $case) {
+            $cases[] = array('id' => $case->id, 'name' => trim($case->name_value_list[0]->value));
+            $casesToAccounts[$case->id] = $case->name_value_list[1]->value;
+        }
+
+        $return = array(
+            'error' => false,
+            'msg' => 'Ok',
+            'cases' => $cases,
+            'casesToAccounts' => $casesToAccounts,
+        );
+    } catch (Exception $e) {
+        $return = array(
+            'error' => true,
+            'msg' => $e->getMessage(),
+        );
+    }
+
+    die(json_encode($return));
+}
+
+function ajax_save_record() {
+    module_load_include('inc', "sugarcrm_connector", "sugarcrm_integration");
+    extract($_GET);   
+    $date = $year . '-' . $month . '-' . $day;
+    $explodeChar = null;
+    if (strpos($hours, '.')) {
+        $explodeChar = '.';
+    }
+
+    if (strpos($hours, ',')) {
+        $explodeChar = ',';
+    }
+
+    if (!is_null($explodeChar)) {
+        list($h, $m) = explode($explodeChar, $hours);
+        $m = sprintf("%-'02s", $m); // pad with 0 to the right
+
+        if ($m <= 25) {
+            $hours = $h . ':15';
+        } elseif ($m <= 50) {
+            $hours = $h . ':30';
+        } elseif ($m <= 75) {
+            $hours = $h . ':45';
+        } else {
+            $hours = ($h + 1) . ':00';
+        }
+    }
+    // Add missing :00
+    if (strpos($hours, ':') === false) {
+        $hours = $hours . ':00';
+    }   
+    try {
+        addRow($case_id, $account_id, $description, $comment, $date, $hours, $category);
+        $return = array('error' => false, 'msg' => 'Added ' . $hours . ' hours to ' . $caseName . ' on ' . date('D \t\h\e j \o\f F Y', mktime(0, 0, 0, $month, $day, $year)));
+    } catch (Exception $e) {
+        $return = array('error' => true, 'msg' => $e->getMessage());
+    }
+
+    die(json_encode($return));
+}
+
