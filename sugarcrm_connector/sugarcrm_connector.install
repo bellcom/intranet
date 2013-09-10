@@ -8,7 +8,7 @@ function sugarcrm_connector_enable() {
     );
   field_create_field($field);
   $field = array(
-        'field_name' => 'field_sugarcrm_password', 
+        'field_name' => 'field_sugarcrm_password (md5)', 
         'type' => 'text', 
     );
   field_create_field($field);
