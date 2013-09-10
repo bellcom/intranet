@@ -1,0 +1,75 @@
+<?php
+
+
+function sugarcrm_connector_enable() {
+  $field= array(
+        'field_name' => 'field_sugarcrm_username', 
+        'type' => 'text', 
+    );
+  field_create_field($field);
+  $field = array(
+        'field_name' => 'field_sugarcrm_password', 
+        'type' => 'text', 
+    );
+  field_create_field($field);
+// Create the instance on the bundle.
+    $instance = array(
+        'field_name' => 'field_sugarcrm_username', 
+        'entity_type' => 'user', 
+        'label' => 'SugarCRM username', 
+        'bundle' => 'user', 
+        
+        'required' => FALSE,
+        'settings' => array(
+        
+            'user_register_form' => 1,
+        ),
+        'widget' => array(
+            'type' => 'textfield',
+        ), 
+    );
+    field_create_instance($instance);
+      $instance = array(
+        'field_name' => 'field_sugarcrm_password (md5)', 
+        'entity_type' => 'user', 
+        'label' => 'SugarCRM password', 
+        'bundle' => 'user', 
+      
+        'required' => FALSE,
+        'settings' => array(
+           // Here you inform either or not you want this field showing up on the registration form.
+            'user_register_form' => 1,
+        ),
+        'widget' => array(
+            'type' => 'textfield',
+        ), 
+    );
+    field_create_instance($instance);
+  
+}
+  
+function sugarcrm_connector_disable() {
+
+   if ($field = field_info_instance('user', 'field_sugarcrm_password', 'user')) 
+  { 
+    field_delete_instance($field);
+  }
+
+  if ($field = field_info_field('field_sugarcrm_password')) 
+  {
+    field_delete_field($field);
+    field_create_instance($instance);
+  }
+   if ($field = field_info_instance('user', 'field_sugarcrm_username', 'user')) 
+  { 
+    field_delete_instance($field);
+  }
+
+  if ($field = field_info_field('field_sugarcrm_username')) 
+  {
+    field_delete_field($field);
+    field_create_instance($instance);
+  }
+}
+
+

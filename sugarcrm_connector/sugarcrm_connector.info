@@ -1,0 +1,5 @@
+name = SugarCRM connector
+description = Integration with SugarCRM.
+core = 7.x 
+package=Time Registration
+files[]=sugarcrm_connector.install

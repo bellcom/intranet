@@ -1,0 +1,3 @@
+name = SugarCRM connector
+description = Integration with SugarCRM.
+core = 7.x 
