@@ -1,8 +1,8 @@
 name = intranet_page_manager_pages
 core = 7.x
 package = Features
+dependencies[] = ctools
+dependencies[] = page_manager
 features[ctools][] = page_manager:pages_default:1
 features[features_api][] = api:2
 features[page_manager_pages][] = contacts
-features_exclude[dependencies][ctools] = ctools
-features_exclude[dependencies][page_manager] = page_manager

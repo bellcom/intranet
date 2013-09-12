@@ -1,6 +1,9 @@
 name = intranet_og_features_permission
 core = 7.x
 package = Features
+dependencies[] = features
+dependencies[] = og
+dependencies[] = og_ui
 features[features_api][] = api:2
 features[og_features_permission][] = node:gruppe:add user
 features[og_features_permission][] = node:gruppe:administer group
@@ -37,6 +40,3 @@ features[og_features_permission][] = node:gruppe:update own gruppe content
 features[og_features_permission][] = node:gruppe:update own page content
 features[og_features_permission][] = node:gruppe:update own upload_fil content
 features[og_features_permission][] = node:gruppe:update own wiki content
-features_exclude[dependencies][features] = features
-features_exclude[dependencies][og] = og
-features_exclude[dependencies][og_ui] = og_ui
