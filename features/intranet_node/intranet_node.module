@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the intranet_node feature.
+ */
+
+include_once 'intranet_node.features.inc';

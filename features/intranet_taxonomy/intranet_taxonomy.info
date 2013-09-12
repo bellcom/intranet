@@ -1,0 +1,10 @@
+name = intranet_taxonomy
+core = 7.x
+package = Features
+features[features_api][] = api:2
+features[taxonomy][] = categories
+features[taxonomy][] = forums
+features[taxonomy][] = tags
+features[taxonomy][] = type
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][taxonomy] = taxonomy

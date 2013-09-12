@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the intranet_image feature.
+ */
+
+include_once 'intranet_image.features.inc';

@@ -1,0 +1,11 @@
+name = intranet_menu_custom
+core = 7.x
+package = Features
+features[features_api][] = api:2
+features[menu_custom][] = features
+features[menu_custom][] = main-menu
+features[menu_custom][] = management
+features[menu_custom][] = navigation
+features[menu_custom][] = user-menu
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][menu] = menu

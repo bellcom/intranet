@@ -1,0 +1,10 @@
+name = intranet_panels_layout
+core = 7.x
+package = Features
+features[ctools][] = panels:layouts:1
+features[features_api][] = api:2
+features[panels_layout][] = subpage
+features[panels_layout][] = subpage_backward
+features[panels_layout][] = two_columns
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][panels] = panels

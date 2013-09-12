@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the intranet_quicktabs feature.
+ */
+
+include_once 'intranet_quicktabs.features.inc';

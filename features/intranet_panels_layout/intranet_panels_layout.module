@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the intranet_panels_layout feature.
+ */
+
+include_once 'intranet_panels_layout.features.inc';

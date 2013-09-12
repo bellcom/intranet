@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the intranet_views_view feature.
+ */
+
+include_once 'intranet_views_view.features.inc';

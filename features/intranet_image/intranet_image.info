@@ -1,0 +1,16 @@
+name = intranet_image
+core = 7.x
+package = Features
+features[features_api][] = api:2
+features[image][] = article_img590x312
+features[image][] = blog_full_590x315
+features[image][] = blog_image380x242
+features[image][] = content_articles270x163
+features[image][] = our_team_80x80
+features[image][] = popular_magazine110x66
+features[image][] = portfolio190x115
+features[image][] = portfolio_270x163
+features[image][] = portfolio_430x228
+features[image][] = portfolio_590x312
+features[image][] = recent_magazine132x78
+features_exclude[dependencies][image] = image
