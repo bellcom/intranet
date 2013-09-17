@@ -32,7 +32,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['access comments'] = array(
     'name' => 'access comments',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
@@ -42,7 +41,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -106,7 +104,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['access site-wide contact form'] = array(
     'name' => 'access site-wide contact form',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'contact',
@@ -125,7 +122,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['access user contact forms'] = array(
     'name' => 'access user contact forms',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'contact',
@@ -306,7 +302,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['administer interwiki'] = array(
     'name' => 'administer interwiki',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'interwiki',
@@ -607,7 +602,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['create article content'] = array(
     'name' => 'create article content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -658,7 +652,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'create forum content'.
   $permissions['create forum content'] = array(
     'name' => 'create forum content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -709,7 +705,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['create page content'] = array(
     'name' => 'create page content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -718,7 +713,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'create panel content'.
   $permissions['create panel content'] = array(
     'name' => 'create panel content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -741,7 +738,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'create poll content'.
   $permissions['create poll content'] = array(
     'name' => 'create poll content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -770,7 +769,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['create todo_list content'] = array(
     'name' => 'create todo_list content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -877,7 +875,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'delete any forum content'.
   $permissions['delete any forum content'] = array(
     'name' => 'delete any forum content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -916,7 +916,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'delete any panel content'.
   $permissions['delete any panel content'] = array(
     'name' => 'delete any panel content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -939,7 +941,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'delete any poll content'.
   $permissions['delete any poll content'] = array(
     'name' => 'delete any poll content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1004,7 +1008,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['delete own article content'] = array(
     'name' => 'delete own article content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1057,7 +1060,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'delete own forum content'.
   $permissions['delete own forum content'] = array(
     'name' => 'delete own forum content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1081,7 +1086,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1090,7 +1094,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'delete own panel content'.
   $permissions['delete own panel content'] = array(
     'name' => 'delete own panel content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1113,7 +1119,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'delete own poll content'.
   $permissions['delete own poll content'] = array(
     'name' => 'delete own poll content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1142,7 +1150,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['delete own todo_list content'] = array(
     'name' => 'delete own todo_list content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1152,7 +1159,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['delete own upload_fil content'] = array(
     'name' => 'delete own upload_fil content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1219,7 +1225,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['edit any article content'] = array(
     'name' => 'edit any article content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1270,7 +1275,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'edit any forum content'.
   $permissions['edit any forum content'] = array(
     'name' => 'edit any forum content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1300,16 +1307,16 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any panel content'.
   $permissions['edit any panel content'] = array(
     'name' => 'edit any panel content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1332,7 +1339,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'edit any poll content'.
   $permissions['edit any poll content'] = array(
     'name' => 'edit any poll content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1361,7 +1370,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['edit any todo_list content'] = array(
     'name' => 'edit any todo_list content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1370,9 +1378,7 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'edit any upload_fil content'.
   $permissions['edit any upload_fil content'] = array(
     'name' => 'edit any upload_fil content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1407,7 +1413,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['edit own article content'] = array(
     'name' => 'edit own article content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1478,7 +1483,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'edit own forum content'.
   $permissions['edit own forum content'] = array(
     'name' => 'edit own forum content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1502,7 +1509,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1511,7 +1517,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'edit own panel content'.
   $permissions['edit own panel content'] = array(
     'name' => 'edit own panel content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1534,7 +1542,9 @@ function intranet_user_permission_user_default_permissions() {
   // Exported permission: 'edit own poll content'.
   $permissions['edit own poll content'] = array(
     'name' => 'edit own poll content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1563,7 +1573,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['edit own todo_list content'] = array(
     'name' => 'edit own todo_list content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1573,7 +1582,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['edit own upload_fil content'] = array(
     'name' => 'edit own upload_fil content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -1889,7 +1897,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['post comments'] = array(
     'name' => 'post comments',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
@@ -1908,7 +1915,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['search content'] = array(
     'name' => 'search content',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'search',
@@ -1979,7 +1985,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'search',
@@ -2041,7 +2046,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
@@ -2051,7 +2055,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
@@ -2070,7 +2073,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['use text format gmap'] = array(
     'name' => 'use text format gmap',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
@@ -2087,7 +2089,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['use text format wiki_format'] = array(
     'name' => 'use text format wiki_format',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
@@ -2097,7 +2098,6 @@ function intranet_user_permission_user_default_permissions() {
   $permissions['view faq page'] = array(
     'name' => 'view faq page',
     'roles' => array(
-      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'faq',
