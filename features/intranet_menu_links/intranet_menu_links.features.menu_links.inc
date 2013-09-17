@@ -24,7 +24,7 @@ function intranet_menu_links_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 1,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 0,
     'weight' => -50,
   );
@@ -87,12 +87,8 @@ function intranet_menu_links_menu_default_menu_links() {
     'menu_name' => 'main-menu',
     'link_path' => 'groups',
     'router_path' => 'groups',
-    'link_title' => 'Wiki',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
+    'link_title' => 'Groups',
+    'options' => array(),
     'module' => 'system',
     'hidden' => 0,
     'external' => 0,
@@ -156,650 +152,19 @@ function intranet_menu_links_menu_default_menu_links() {
     'weight' => -49,
     'parent_path' => 'groups',
   );
-  // Exported menu link: main-menu:node/100
-  $menu_links['main-menu:node/100'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/100',
-    'router_path' => 'node/%',
-    'link_title' => 'Total validate tool - test af standarder',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: main-menu:node/104
-  $menu_links['main-menu:node/104'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/104',
-    'router_path' => 'node/%',
-    'link_title' => 'Telefonsystemet',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/93',
-  );
-  // Exported menu link: main-menu:node/105
-  $menu_links['main-menu:node/105'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/105',
-    'router_path' => 'node/%',
-    'link_title' => 'Nyhedsbreve',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/93',
-  );
-  // Exported menu link: main-menu:node/106
-  $menu_links['main-menu:node/106'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/106',
-    'router_path' => 'node/%',
-    'link_title' => 'November 2012',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/105',
-  );
-  // Exported menu link: main-menu:node/107
-  $menu_links['main-menu:node/107'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/107',
-    'router_path' => 'node/%',
-    'link_title' => 'December 2012',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/105',
-  );
-  // Exported menu link: main-menu:node/109
-  $menu_links['main-menu:node/109'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/109',
-    'router_path' => 'node/%',
-    'link_title' => 'Demo systemer',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'portfolio',
-  );
-  // Exported menu link: main-menu:node/110
-  $menu_links['main-menu:node/110'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/110',
-    'router_path' => 'node/%',
-    'link_title' => 'Bellcom Systemer',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/93',
-  );
-  // Exported menu link: main-menu:node/112
-  $menu_links['main-menu:node/112'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/112',
-    'router_path' => 'node/%',
-    'link_title' => 'Standard aftaler',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'portfolio',
-  );
-  // Exported menu link: main-menu:node/113
-  $menu_links['main-menu:node/113'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/113',
-    'router_path' => 'node/%',
-    'link_title' => 'Videolæring - drupalize.me',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: main-menu:node/129
-  $menu_links['main-menu:node/129'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/129',
-    'router_path' => 'node/%',
-    'link_title' => 'Pin og Puk koder',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/93',
-  );
-  // Exported menu link: main-menu:node/130
-  $menu_links['main-menu:node/130'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/130',
-    'router_path' => 'node/%',
-    'link_title' => 'Januar 2013',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 1,
-    'parent_path' => 'node/105',
-  );
-  // Exported menu link: main-menu:node/132
-  $menu_links['main-menu:node/132'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/132',
-    'router_path' => 'node/%',
-    'link_title' => 'Sugarcrm til thundergbird',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: main-menu:node/133
-  $menu_links['main-menu:node/133'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/133',
-    'router_path' => 'node/%',
-    'link_title' => 'Februar 2013',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/105',
-  );
-  // Exported menu link: main-menu:node/136
-  $menu_links['main-menu:node/136'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/136',
-    'router_path' => 'node/%',
-    'link_title' => 'Udviklingsproces',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/93',
-  );
-  // Exported menu link: main-menu:node/137
-  $menu_links['main-menu:node/137'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/137',
-    'router_path' => 'node/%',
-    'link_title' => 'Frokostordning',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: main-menu:node/138
-  $menu_links['main-menu:node/138'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/138',
-    'router_path' => 'node/%',
-    'link_title' => 'Grafiske elementer',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'portfolio',
-  );
-  // Exported menu link: main-menu:node/139
-  $menu_links['main-menu:node/139'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/139',
-    'router_path' => 'node/%',
-    'link_title' => 'Udkast-Kundereferencer',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'portfolio',
-  );
-  // Exported menu link: main-menu:node/140
-  $menu_links['main-menu:node/140'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/140',
-    'router_path' => 'node/%',
-    'link_title' => 'Sikkerhedsstyrelsen',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/139',
-  );
-  // Exported menu link: main-menu:node/141
-  $menu_links['main-menu:node/141'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/141',
-    'router_path' => 'node/%',
-    'link_title' => 'Wayf Sekretariatet under Styrelsen for Bibliotek og Medier',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/139',
-  );
-  // Exported menu link: main-menu:node/142
-  $menu_links['main-menu:node/142'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/142',
-    'router_path' => 'node/%',
-    'link_title' => 'Next - konference system - Århus Kommune, Biblioteker',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/139',
-  );
-  // Exported menu link: main-menu:node/143
-  $menu_links['main-menu:node/143'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/143',
-    'router_path' => 'node/%',
-    'link_title' => 'Valghalla - Århus kommune',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/139',
-  );
-  // Exported menu link: main-menu:node/144
-  $menu_links['main-menu:node/144'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/144',
-    'router_path' => 'node/%',
-    'link_title' => 'Ehandel - POMPdeLUX',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/139',
-  );
-  // Exported menu link: main-menu:node/145
-  $menu_links['main-menu:node/145'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/145',
-    'router_path' => 'node/%',
-    'link_title' => 'Tidligere udbud / aftaler',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'portfolio',
-  );
-  // Exported menu link: main-menu:node/146
-  $menu_links['main-menu:node/146'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/146',
-    'router_path' => 'node/%',
-    'link_title' => 'Præsentationer / workshops',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'portfolio',
-  );
-  // Exported menu link: main-menu:node/148
-  $menu_links['main-menu:node/148'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/148',
-    'router_path' => 'node/%',
-    'link_title' => 'Lønudbetaling',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: main-menu:node/151
-  $menu_links['main-menu:node/151'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/151',
-    'router_path' => 'node/%',
-    'link_title' => 'April 2013',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 3,
-    'parent_path' => 'node/105',
-  );
-  // Exported menu link: main-menu:node/154
-  $menu_links['main-menu:node/154'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/154',
-    'router_path' => 'node/%',
-    'link_title' => 'Konti',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 0,
-    'weight' => 0,
-  );
-  // Exported menu link: main-menu:node/155
-  $menu_links['main-menu:node/155'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/155',
-    'router_path' => 'node/%',
-    'link_title' => 'Mailchimp nyhedsbreve',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/154',
-  );
-  // Exported menu link: main-menu:node/156
-  $menu_links['main-menu:node/156'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/156',
-    'router_path' => 'node/%',
-    'link_title' => 'Maj 2013',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/105',
-  );
-  // Exported menu link: main-menu:node/157
-  $menu_links['main-menu:node/157'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/157',
-    'router_path' => 'node/%',
-    'link_title' => 'Support tlf. koder',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/129',
-  );
-  // Exported menu link: main-menu:node/159
-  $menu_links['main-menu:node/159'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/159',
-    'router_path' => 'node/%',
-    'link_title' => 'Nyhedsbrev juni - juli',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 5,
-    'parent_path' => 'node/105',
-  );
-  // Exported menu link: main-menu:node/164
-  $menu_links['main-menu:node/164'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/164',
-    'router_path' => 'node/%',
-    'link_title' => 'TODO',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-  );
-  // Exported menu link: main-menu:node/36
-  $menu_links['main-menu:node/36'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/36',
-    'router_path' => 'node/%',
-    'link_title' => 'Juleafslutning',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'events',
-  );
-  // Exported menu link: main-menu:node/91
-  $menu_links['main-menu:node/91'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/91',
-    'router_path' => 'node/%',
-    'link_title' => 'Massageordning',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -47,
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: main-menu:node/92
-  $menu_links['main-menu:node/92'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/92',
-    'router_path' => 'node/%',
-    'link_title' => 'IT-Sikkerhed',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -45,
-    'parent_path' => 'node/93',
-  );
-  // Exported menu link: main-menu:node/93
-  $menu_links['main-menu:node/93'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/93',
-    'router_path' => 'node/%',
-    'link_title' => 'Medarbejdere',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 0,
-    'weight' => -45,
-  );
-  // Exported menu link: main-menu:node/94
-  $menu_links['main-menu:node/94'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/94',
-    'router_path' => 'node/%',
-    'link_title' => 'Arbejdstid',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: main-menu:node/95
-  $menu_links['main-menu:node/95'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/95',
-    'router_path' => 'node/%',
-    'link_title' => 'Ferie og fridage',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: main-menu:node/96
-  $menu_links['main-menu:node/96'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/96',
-    'router_path' => 'node/%',
-    'link_title' => 'Sygdom og fravær',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -46,
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: main-menu:node/97
-  $menu_links['main-menu:node/97'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/97',
-    'router_path' => 'node/%',
-    'link_title' => 'Dukseliste',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
-    'parent_path' => 'node/93',
-  );
-  // Exported menu link: main-menu:node/98
-  $menu_links['main-menu:node/98'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/98',
-    'router_path' => 'node/%',
-    'link_title' => 'Booking af firmabil',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => 'node/93',
-  );
-  // Exported menu link: main-menu:node/99
-  $menu_links['main-menu:node/99'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/99',
-    'router_path' => 'node/%',
-    'link_title' => 'Tidsregistrering',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'parent_path' => '<front>',
-  );
   // Exported menu link: main-menu:portfolio
   $menu_links['main-menu:portfolio'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'portfolio',
     'router_path' => 'portfolio',
-    'link_title' => 'Produkter',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
+    'link_title' => 'Portfolio',
+    'options' => array(),
     'module' => 'system',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => 0,
   );
   // Exported menu link: main-menu:portfolio-1-col
   $menu_links['main-menu:portfolio-1-col'] = array(
@@ -809,11 +174,11 @@ function intranet_menu_links_menu_default_menu_links() {
     'link_title' => 'Portfolio 1 col',
     'options' => array(),
     'module' => 'system',
-    'hidden' => 1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => 0,
     'parent_path' => 'portfolio',
   );
   // Exported menu link: main-menu:portfolio-2-col
@@ -824,11 +189,11 @@ function intranet_menu_links_menu_default_menu_links() {
     'link_title' => 'Portfolio 2 col',
     'options' => array(),
     'module' => 'system',
-    'hidden' => 1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => 0,
     'parent_path' => 'portfolio',
   );
   // Exported menu link: main-menu:portfolio-3-col
@@ -839,11 +204,11 @@ function intranet_menu_links_menu_default_menu_links() {
     'link_title' => 'Portfolio 3 col',
     'options' => array(),
     'module' => 'system',
-    'hidden' => 1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => 0,
     'parent_path' => 'portfolio',
   );
   // Exported menu link: management:admin
@@ -1088,7 +453,7 @@ function intranet_menu_links_menu_default_menu_links() {
   $menu_links['management:admin/config/date/date_popup'] = array(
     'menu_name' => 'management',
     'link_path' => 'admin/config/date/date_popup',
-    'router_path' => 'admin/config/date/date_popup',
+    'router_path' => 'admin/config/date',
     'link_title' => 'Date Popup',
     'options' => array(
       'attributes' => array(
@@ -1791,7 +1156,7 @@ function intranet_menu_links_menu_default_menu_links() {
   $menu_links['management:admin/config/services/gauth_user'] = array(
     'menu_name' => 'management',
     'link_path' => 'admin/config/services/gauth_user',
-    'router_path' => 'admin/config/services/gauth_user',
+    'router_path' => 'admin/config/services',
     'link_title' => 'Google Account Services Settings',
     'options' => array(
       'attributes' => array(
@@ -2171,7 +1536,7 @@ function intranet_menu_links_menu_default_menu_links() {
   $menu_links['management:admin/reports/fields'] = array(
     'menu_name' => 'management',
     'link_path' => 'admin/reports/fields',
-    'router_path' => 'admin/reports/fields',
+    'router_path' => 'admin/reports',
     'link_title' => 'Field list',
     'options' => array(
       'attributes' => array(
@@ -2209,7 +1574,7 @@ function intranet_menu_links_menu_default_menu_links() {
   $menu_links['management:admin/reports/updates'] = array(
     'menu_name' => 'management',
     'link_path' => 'admin/reports/updates',
-    'router_path' => 'admin/reports/updates',
+    'router_path' => 'admin/reports',
     'link_title' => 'Available updates',
     'options' => array(
       'attributes' => array(
@@ -2228,7 +1593,7 @@ function intranet_menu_links_menu_default_menu_links() {
   $menu_links['management:admin/reports/views-plugins'] = array(
     'menu_name' => 'management',
     'link_path' => 'admin/reports/views-plugins',
-    'router_path' => 'admin/reports/views-plugins',
+    'router_path' => 'admin/reports',
     'link_title' => 'Views plugins',
     'options' => array(
       'attributes' => array(
@@ -2573,7 +1938,7 @@ function intranet_menu_links_menu_default_menu_links() {
   $menu_links['management:admin/structure/views'] = array(
     'menu_name' => 'management',
     'link_path' => 'admin/structure/views',
-    'router_path' => 'admin/structure/views',
+    'router_path' => 'admin/structure',
     'link_title' => 'Views',
     'options' => array(
       'attributes' => array(
@@ -2885,10 +2250,10 @@ function intranet_menu_links_menu_default_menu_links() {
     'menu_name' => 'navigation',
     'link_path' => 'node/add/blog',
     'router_path' => 'node/add/blog',
-    'link_title' => 'Blogindlæg',
+    'link_title' => 'Blog entry',
     'options' => array(
       'attributes' => array(
-        'title' => 'Bruges til flerbrugerblogs. Hver bruger får en personlig blog.',
+        'title' => 'Use for multi-user blogs. Every user gets a personal blog.',
       ),
     ),
     'module' => 'system',
@@ -2991,10 +2356,10 @@ function intranet_menu_links_menu_default_menu_links() {
     'menu_name' => 'navigation',
     'link_path' => 'node/add/forum',
     'router_path' => 'node/add/forum',
-    'link_title' => 'Forumemne',
+    'link_title' => 'Forum topic',
     'options' => array(
       'attributes' => array(
-        'title' => 'Et <em>forumemne</em> starter en ny diskussionstråd i et forum.',
+        'title' => 'A <em>forum topic</em> starts a new discussion thread within a forum.',
       ),
     ),
     'module' => 'system',
@@ -3066,7 +2431,7 @@ function intranet_menu_links_menu_default_menu_links() {
     'link_title' => 'Panel',
     'options' => array(
       'attributes' => array(
-        'title' => 'Et panel-layout opdelt i rækker og kolonner.',
+        'title' => 'A panel layout broken up into rows and columns.',
       ),
     ),
     'module' => 'system',
@@ -3097,10 +2462,10 @@ function intranet_menu_links_menu_default_menu_links() {
     'menu_name' => 'navigation',
     'link_path' => 'node/add/poll',
     'router_path' => 'node/add/poll',
-    'link_title' => 'Afstemning',
+    'link_title' => 'Poll',
     'options' => array(
       'attributes' => array(
-        'title' => 'En <em>afstemning</em> er et spørgsmål med en række mulige svar. Når en <em>afstemning</em> er oprettet, foretages løbende optælling af stemmerne på de enkelte svarmuligheder.',
+        'title' => 'A <em>poll</em> is a question with a set of possible responses. A <em>poll</em>, once created, automatically provides a simple running count of the number of votes received for each response.',
       ),
     ),
     'module' => 'system',
@@ -3269,20 +2634,6 @@ function intranet_menu_links_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 1,
   );
-  // Exported menu link: user-menu:faq-questions-top
-  $menu_links['user-menu:faq-questions-top'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'faq-questions-top',
-    'router_path' => 'faq-questions-top',
-    'link_title' => 'FAQ',
-    'options' => array(),
-    'module' => 'system',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -46,
-  );
   // Exported menu link: user-menu:user
   $menu_links['user-menu:user'] = array(
     'menu_name' => 'user-menu',
@@ -3297,7 +2648,7 @@ function intranet_menu_links_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -10,
   );
   // Exported menu link: user-menu:user/login
   $menu_links['user-menu:user/login'] = array(
@@ -3326,7 +2677,7 @@ function intranet_menu_links_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => 10,
   );
   // Translatables
   // Included for use with string extractors like potx.
@@ -3334,19 +2685,14 @@ function intranet_menu_links_menu_default_menu_links() {
   t('Actions');
   t('Add content');
   t('Administration');
-  t('Afstemning');
   t('Appearance');
-  t('April 2013');
-  t('Arbejdstid');
   t('Article');
   t('Available updates');
   t('Basic page');
-  t('Bellcom Systemer');
   t('Blocks');
-  t('Blogindlæg');
+  t('Blog entry');
   t('Blogs');
   t('Book page');
-  t('Booking af firmabil');
   t('Books');
   t('Build a GMap macro');
   t('Calendar');
@@ -3367,55 +2713,39 @@ function intranet_menu_links_menu_default_menu_links() {
   t('Date Popup');
   t('Date Tools');
   t('Date and time');
-  t('December 2012');
-  t('Demo systemer');
   t('Development');
   t('DropBox Client Settings');
   t('Dropbox Client for Drupal');
   t('Dropbox Files');
-  t('Dukseliste');
   t('Duplicate titles');
-  t('Ehandel - POMPdeLUX');
   t('Employee');
   t('Events');
   t('FAQ');
   t('Features');
-  t('Februar 2013');
   t('Feed aggregator');
-  t('Ferie og fridage');
   t('Field list');
   t('File system');
   t('Forside');
-  t('Forumemne');
+  t('Forum topic');
   t('Forums');
   t('Frequently Asked Questions');
-  t('Frokostordning');
   t('GMap');
   t('Gallery');
   t('GeSHi Filter');
   t('Google Account Services Settings');
   t('Google Account Settings');
-  t('Grafiske elementer');
+  t('Groups');
   t('IP address blocking');
-  t('IT-Sikkerhed');
   t('Image styles');
   t('Image toolkit');
   t('Interwiki');
-  t('Januar 2013');
-  t('Juleafslutning');
-  t('Konti');
   t('Languages');
   t('Log in');
   t('Log out');
   t('Logging and errors');
-  t('Lønudbetaling');
-  t('Mailchimp nyhedsbreve');
   t('Main menu');
   t('Maintenance mode');
-  t('Maj 2013');
   t('Management');
-  t('Massageordning');
-  t('Medarbejdere');
   t('Media');
   t('Menu block');
   t('Menus');
@@ -3423,10 +2753,6 @@ function intranet_menu_links_menu_default_menu_links() {
   t('Modules');
   t('My blog');
   t('Navigation');
-  t('Next - konference system - Århus Kommune, Biblioteker');
-  t('November 2012');
-  t('Nyhedsbrev juni - juli');
-  t('Nyhedsbreve');
   t('OG context');
   t('OG field settings');
   t('OG membership types');
@@ -3443,14 +2769,12 @@ function intranet_menu_links_menu_default_menu_links() {
   t('Partners');
   t('People');
   t('Performance');
-  t('Pin og Puk koder');
+  t('Poll');
   t('Polls');
   t('Portfolio');
   t('Portfolio 1 col');
   t('Portfolio 2 col');
   t('Portfolio 3 col');
-  t('Produkter');
-  t('Præsentationer / workshops');
   t('Quicktabs');
   t('RSS publishing');
   t('Recent content');
@@ -3462,7 +2786,6 @@ function intranet_menu_links_menu_default_menu_links() {
   t('Search settings');
   t('Services');
   t('Shortcuts');
-  t('Sikkerhedsstyrelsen');
   t('Site follow links');
   t('Site information');
   t('Skype status settings');
@@ -3470,39 +2793,25 @@ function intranet_menu_links_menu_default_menu_links() {
   t('Snapshots');
   t('Social Share');
   t('Sources');
-  t('Standard aftaler');
   t('Status report');
   t('Structure');
-  t('Sugarcrm til thundergbird');
   t('Superfish');
-  t('Support tlf. koder');
-  t('Sygdom og fravær');
   t('System');
-  t('TODO');
   t('TODO list');
   t('Taxonomy');
-  t('Telefonsystemet');
   t('Text formats');
-  t('Tidligere udbud / aftaler');
-  t('Tidsregistrering');
   t('Time registration');
-  t('Total validate tool - test af standarder');
   t('Translate interface');
   t('Translate strings');
   t('Triggers');
   t('Twitter Profile Widget');
   t('URL aliases');
-  t('Udkast-Kundereferencer');
-  t('Udviklingsproces');
   t('Upload Fil');
   t('User account');
   t('User interface');
   t('User menu');
-  t('Valghalla - Århus kommune');
-  t('Videolæring - drupalize.me');
   t('Views');
   t('Views plugins');
-  t('Wayf Sekretariatet under Styrelsen for Bibliotek og Medier');
   t('Web services');
   t('Wiki');
   t('Wiki filter prefixes');
