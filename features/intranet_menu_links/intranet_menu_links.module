@@ -3,3 +3,15 @@
  * @file
  * Drupal needs this blank file.
  */
+
+function intranet_menu_links_install() {
+	$link = array(
+			'menu_name'   => 'user-menu',
+			'weight'   	  => 0,
+			'link_title'  => 'Login',
+			'hidden'      => 0,
+			'link_path'   => 'user/login',
+		);
+
+	menu_link_save($link);
+}
