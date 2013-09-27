@@ -801,51 +801,6 @@ function intranet_menu_links_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -48,
   );
-  // Exported menu link: main-menu:portfolio-1-col
-  $menu_links['main-menu:portfolio-1-col'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'portfolio-1-col',
-    'router_path' => 'portfolio-1-col',
-    'link_title' => 'Portfolio 1 col',
-    'options' => array(),
-    'module' => 'system',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
-    'parent_path' => 'portfolio',
-  );
-  // Exported menu link: main-menu:portfolio-2-col
-  $menu_links['main-menu:portfolio-2-col'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'portfolio-2-col',
-    'router_path' => 'portfolio-2-col',
-    'link_title' => 'Portfolio 2 col',
-    'options' => array(),
-    'module' => 'system',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'parent_path' => 'portfolio',
-  );
-  // Exported menu link: main-menu:portfolio-3-col
-  $menu_links['main-menu:portfolio-3-col'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'portfolio-3-col',
-    'router_path' => 'portfolio-3-col',
-    'link_title' => 'Portfolio 3 col',
-    'options' => array(),
-    'module' => 'system',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'parent_path' => 'portfolio',
-  );
   // Exported menu link: management:admin
   $menu_links['management:admin'] = array(
     'menu_name' => 'management',
@@ -3446,9 +3401,6 @@ function intranet_menu_links_menu_default_menu_links() {
   t('Pin og Puk koder');
   t('Polls');
   t('Portfolio');
-  t('Portfolio 1 col');
-  t('Portfolio 2 col');
-  t('Portfolio 3 col');
   t('Produkter');
   t('Præsentationer / workshops');
   t('Quicktabs');
