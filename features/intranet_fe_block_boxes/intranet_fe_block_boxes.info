@@ -1,0 +1,6 @@
+name = intranet_fe_block_boxes
+core = 7.x
+package = Features
+dependencies[] = intranet_fe_block_settings
+features[fe_block_boxes][] = objectives
+features[features_api][] = api:2
