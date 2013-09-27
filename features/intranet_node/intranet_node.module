@@ -5,3 +5,8 @@
  */
 
 include_once 'intranet_node.features.inc';
+
+function intranet_node_install()
+{
+	variable_set('node_submitted_todo_list', 0);
+}
