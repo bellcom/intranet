@@ -1,0 +1,4 @@
+<?php
+// in seconds
+// 15 min by default
+DEFINE ('GOOGLE_SYNC_INTERVAL', 900);

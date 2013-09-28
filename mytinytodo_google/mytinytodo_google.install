@@ -1,0 +1,66 @@
+<?php
+function mytinytodo_google_schema_alter() {
+    $schema['mytinytodo_todos']['fields']['google_task_id'] =
+            array(
+                'type' => 'varchar',
+                'length' => 250, 
+                'not null' => FALSE
+    );
+   
+    $schema['mytinytodo_subtasks']['fields']['google_task_id'] = array(
+        'type' => 'varchar',
+        'length' => 250,
+        'not null' => FALSE
+    );
+    $schema['mytinytodo_lists']['fields']['google_defaultlist_id'] = array(
+        'type' => 'varchar',
+        'length' => 250,
+        'not null' => FALSE
+    );
+    $schema['mytinytodo_lists']['fields']['google_sync_time'] = array(
+        'type' => 'int', 
+        'unsigned' => TRUE, 
+        'not null' => TRUE, 
+        'default' => 0
+    );
+    $schema['mytinytodo_lists']['fields']['google_sync'] = array(
+        'type' => 'int', 
+        'unsigned' => TRUE, 
+        'not null' => TRUE, 
+        'default' => 1
+    );
+}
+
+function mytinytodo_google_install() {
+    $new_filed = array(
+        'type' => 'varchar',
+        'length' => 250, 
+        'not null' => FALSE
+    );
+    db_add_field('mytinytodo_todos', 'google_tasklist_id', $new_filed);
+    db_add_field('mytinytodo_todos', 'google_task_id', $new_filed);
+    db_add_field('mytinytodo_subtasks', 'google_task_id', $new_filed);
+    db_add_field('mytinytodo_lists', 'google_defaultlist_id', $new_filed);
+     $new_filed= array(
+        'type' => 'int', 
+        'unsigned' => TRUE, 
+        'not null' => TRUE, 
+        'default' => 0);
+     db_add_field('mytinytodo_lists', 'google_sync_time', $new_filed);
+     $google_sync_field= array(
+        'type' => 'int', 
+        'unsigned' => TRUE, 
+        'not null' => TRUE, 
+        'default' => 1);
+     db_add_field('mytinytodo_lists', 'google_sync', $google_sync_field);
+}
+
+function mytinytodo_google_uninstall() {
+
+    db_drop_field('mytinytodo_todos', 'google_task_id');
+    db_drop_field('mytinytodo_todos', 'google_tasklist_id');
+    db_drop_field('mytinytodo_subtasks', 'google_task_id');
+    db_drop_field('mytinytodo_lists', 'google_defaultlist_id');
+     db_drop_field('mytinytodo_lists', 'google_sync_time');
+      db_drop_field('mytinytodo_lists', 'google_sync');
+}
